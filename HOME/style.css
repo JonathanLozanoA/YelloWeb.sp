@@ -34,6 +34,7 @@ img {
     background-color: #ffd90f;
     color: #2e2e2e;
     font: medium sans-serif;
+    font-size: 16px;
     border-radius: 5px;
     padding: 5px;
     text-align: center;
@@ -60,4 +61,4 @@ img {
     padding: 0 30px;
     z-index: 1;
  }
- ]
+ 
