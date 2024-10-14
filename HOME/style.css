@@ -45,7 +45,7 @@ img {
     padding: 0 1px 0 30px;
     margin: 50px auto;
     position: relative;
-    width: 1150px;
+    width: 1160px;
     height: 60px;
     background-color: #ffd90f;
     border-radius: 20px;
@@ -67,7 +67,7 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 225px;
+    width: 233px;
     height: 100%;
     background: linear-gradient(90deg, #F257AC, #F28DC4);
     border-radius: 20px;
