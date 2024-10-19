@@ -22,7 +22,7 @@ h1 {
     padding: 0 1px 0 10px;
     margin: 50px auto;
     position: relative;
-    width: 1160px;
+    width: 960px;
     height: 60px;
     background-color: #ffd90f;
     border-radius: 20px;
@@ -55,16 +55,13 @@ h1 {
     left: 0px;
  }
  section a:nth-child(2):hover~span{
-    left: 220px;
+    left: 250px;
  }
  section a:nth-child(3):hover~span{
-    left: 453px;
+    left: 494px;
  }
  section a:nth-child(4):hover~span{
-    left: 697px;
- }
- section a:nth-child(5):hover~span{
-    left: 938px;
+    left: 737px;
  }
 
  
