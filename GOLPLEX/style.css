@@ -14,7 +14,7 @@ h1 {
 
 #imgH1 {
     width: 520px;
-    border-radius: 20px;
+    border-radius: 80px;
  }
 
  section {
@@ -22,9 +22,9 @@ h1 {
     padding: 0 1px 0 10px;
     margin: 50px auto;
     position: relative;
-    width: 960px;
-    height: 60px;
     background-color: #ffd90f;
+    width: 960px;
+    height: 60px;    
     border-radius: 20px;
     display: flexbox;
     justify-content: center;
