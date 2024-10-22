@@ -23,7 +23,7 @@ section{
     margin: 55px auto;
     position: relative;
     background-color: #ffd90f;
-    width: 960px;
+    width: 893px;
     height: 60px;
     border-radius: 20px;
     display: flexbox;
@@ -36,7 +36,7 @@ section a {
     text-decoration: none;
     font-size: 1em;
     color: #2e2e2e;
-    padding: 0 30px;
+    padding: 0 21px;
     z-index: 1;
 }
 
@@ -55,11 +55,11 @@ section a:nth-child(1):hover~span{
    left: 0px;
 }
 section a:nth-child(2):hover~span{
-   left: 266px;
+   left: 231px;
 }
 section a:nth-child(3):hover~span{
-   left: 494px;
+   left: 444px;
 }
 section a:nth-child(4):hover~span{
-   left: 737px;
+   left: 662px;
 }
