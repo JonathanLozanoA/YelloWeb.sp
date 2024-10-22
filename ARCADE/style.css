@@ -1,0 +1,65 @@
+body {
+    justify-content: center;
+    background-color: #fffdc1;
+    font-family: Franklin Gothic Medium;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px auto;
+    padding: 00 10px 0;
+}
+
+#imgH1 {
+    border-radius: 80px;
+    width: 520px;
+}
+
+section {
+    font-size: 50px;
+    padding: 0 1px 0 10px;
+    margin: 50px auto;
+    position: relative;
+    background-color: #ffd90f;
+    border-radius: 20px;
+    width: 939px;
+    height: 60px;
+    display: flexbox;
+    justify-content: center;
+}
+
+section a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    color: #2e2e2e;
+    padding: 0 28px;
+    z-index: 1;
+}
+
+section span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(30deg, #f257ac, #f28dc4);
+    width: 233px;
+    height: 100%;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+section a:nth-child(1):hover~span{
+    left: 0px;
+ }
+ section a:nth-child(2):hover~span{
+    left: 237px;
+ }
+ section a:nth-child(3):hover~span{
+    left: 482px;
+ }
+ section a:nth-child(4):hover~span{
+    left: 717px;
+ }
