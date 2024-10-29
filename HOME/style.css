@@ -17,7 +17,7 @@ h1{
    border-radius: 80px;
 }
 
-article{
+main{
     display: inline-flex;
     flex-flow: wrap;
     padding: 10px;
