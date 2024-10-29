@@ -1,67 +1,67 @@
-body {
-    justify-content: center;
-    background-color: #fffdc1;
-    font-family: Franklin Gothic Medium;
-    align-items: center;
-    min-height: 100vh;
+body{
+   justify-content: center;
+   background-color: #fffdc1;
+   font-family: Franklin Gothic Medium;
+   align-items: center;
+   min-height: 100vh;
 }
 
-h1 {
-    text-align: center;
-    margin: 20px auto;
-    padding: 0 0 10px 0;
- }
+h1{
+   text-align: center;
+   margin: 20px auto;
+   padding: 0 0 10px 0;
+}
 
-#imgH1 {
-    width: 520px;
-    border-radius: 80px;
- }
+#imgH1{
+   width: 520px;
+   border-radius: 80px;
+}
 
- section {
-    font-size: 50px;
-    padding: 0 1px 0 10px;
-    margin: 50px auto;
-    position: relative;
-    background-color: #ffd90f;
-    width: 919px;
-    height: 60px;    
-    border-radius: 20px;
-    display: flexbox;
-    justify-content: center;
- }
+nav{
+   font-size: 50px;
+   padding: 0 1px 0 10px;
+   margin: 50px auto;
+   position: relative;
+   background-color: #ffd90f;
+   width: 919px;
+   height: 60px;    
+   border-radius: 20px;
+   display: flexbox;
+   justify-content: center;
+}
 
- section a {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 1em;
-    color: #2e2e2e;
-    padding: 0 25px;
-    z-index: 1;
- }
+nav a{
+   position: relative;
+   display: inline-block;
+   text-decoration: none;
+   font-size: 1em;
+   color: #2e2e2e;
+   padding: 0 25px;
+   z-index: 1;
+}
  
- section span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(30deg, #F257AC, #F28DC4);
-    width: 233px;
-    height: 100%;
-    border-radius: 20px;
-    transition: 0.5s;
- }
+nav span{
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: linear-gradient(30deg, #F257AC, #F28DC4);
+   width: 233px;
+   height: 100%;
+   border-radius: 20px;
+   transition: 0.5s;
+}
 
- section a:nth-child(1):hover~span{
-    left: 0px;
- }
- section a:nth-child(2):hover~span{
-    left: 237px;
- }
- section a:nth-child(3):hover~span{
-    left: 474px;
- }
- section a:nth-child(4):hover~span{
-    left: 697px;
- }
+nav a:nth-child(1):hover~span{
+   left: 0px;
+}
+nav a:nth-child(2):hover~span{
+   left: 237px;
+}
+nav a:nth-child(3):hover~span{
+   left: 474px;
+}
+nav a:nth-child(4):hover~span{
+   left: 697px;
+}
 
  
