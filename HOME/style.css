@@ -6,6 +6,10 @@ body{
     min-height: 100vh;
 }
 
+::selection{
+   background-color:#F257AC;
+}
+
 h1{
    text-align: center;
    margin: 20px auto;
