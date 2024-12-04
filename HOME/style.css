@@ -108,6 +108,16 @@ nav a:nth-child(5):hover~span {
 #envolturaFooter {
    background-color: #ffd90f;
    width: 100%;
-   min-height: 50px;
+   min-height: 30px;
    bottom: 0px;
+   border: solid 1px black;
+}
+
+#envolturaFooter summary {
+   padding: 10px;
+}
+
+#envolturaFooter p {
+   text-decoration: underline;
+   text-align: center;
 }
