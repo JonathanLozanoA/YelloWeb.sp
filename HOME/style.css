@@ -5,19 +5,18 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-
 #envolturaGlobal {
    width: 100%;
    max-width: 1630px;
    margin: 0 auto;
 }
-
-/* SELECCION MOUSE */
 ::selection {
+   /* SELECCION MOUSE */
    background-color:#F257AC;
 }
 
-/*/HEADER/*/
+
+/*||||||HEADER|||||*/
 
 /* LOGO PRINCIPAL */
 h1 {
@@ -25,7 +24,6 @@ h1 {
    margin: 20px auto;
    padding: 10px;
 }
-
 #imgH1 {
    width: 520px;   
    border-radius: 80px;
@@ -44,7 +42,6 @@ nav {
    display: flexbox;
    justify-content: center;
 }
-
 nav a {
    position: relative;
    display: inline-block;
@@ -54,8 +51,7 @@ nav a {
    padding: 0 50px 0 5px;
    z-index: 1;
 }
- 
-nav span {
+ nav span {
    position: absolute;
    top: 0;
    left: 0;
@@ -65,7 +61,6 @@ nav span {
    border-radius: 20px;
    transition: 0.5s;
 }
-
 nav a:nth-child(1):hover~span {
    left: 0px;
 }
@@ -82,13 +77,13 @@ nav a:nth-child(5):hover~span {
    left: 958px;
 }
 
-/*/MAIN/*/
+
+/*||||||MAIN|||||||*/
 main {
    display: inline-flex;
    flex-flow: wrap;
    padding: 1px;
 }
-
 #fotosHome .imgHome {
   margin: 5px 0;
   text-align: center;
@@ -99,7 +94,6 @@ main {
   clear: none;
  
 }
-
 #fotosHome figcaption {
   background-color: #ffd90f;
   color: #2e2e2e;
@@ -110,7 +104,8 @@ main {
   
 }
 
-/*/FOOTER/*/
+
+/*||||||FOOTER||||||||*/
 #copyright {
    background-color: #ffd90f;
    width: 100%;
@@ -118,11 +113,9 @@ main {
    bottom: 0px;
    border: solid 1px black;
 }
-
 #copyright summary {
    padding: 10px;
 }
-
 #copyright p {
    text-decoration: underline;
    text-align: center;

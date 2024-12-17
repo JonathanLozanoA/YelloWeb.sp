@@ -6,17 +6,21 @@ body{
     min-height: 100vh;
 }
 
+
+/*||||||HEADER|||||*/
+
+/* LOGO PRINCIPAL */
 h1{
     text-align: center;
     margin: 20px auto;
     padding: 00 10px 0;
 }
-
 #imgH1{
     border-radius: 80px;
     width: 520px;
 }
 
+/* NAVEGADOR PRINCIPAL */
 nav{
     font-size: 50px;
     padding: 0 1px 0 10px;
@@ -29,7 +33,6 @@ nav{
     display: flexbox;
     justify-content: center;
 }
-
 nav a{
     text-decoration: none;
     position: relative;
@@ -39,7 +42,6 @@ nav a{
     padding: 0 28px;
     z-index: 1;
 }
-
 nav span{
     position: absolute;
     top: 0;
@@ -50,7 +52,6 @@ nav span{
     border-radius: 20px;
     transition: 0.5s;
 }
-
 nav a:nth-child(1):hover~span{
     left: 0px;
 }
