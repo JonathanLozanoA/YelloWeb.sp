@@ -25,7 +25,7 @@
     
     <title>YelloWeb.sp | Arcade Games</title>
     <link rel="stylesheet" href="HOME/style.css">
-    <script src="arcade.js"></script>
+    
 </head>
 
 <body>
@@ -41,14 +41,19 @@
         </nav>
     </header>
     <main>
-        <h1>🔪😼Tomy vs Daly🐭💣</h1>
+        <h1>😼🔪Tomy & Daly🪓🐭</h1>
         
         <!-- PENDING TO ADD eventListener -->
         <section id="seleccionPersonaje">
             <h2>¿<span id="h2Tomy">Tomy</span> o <span id="h2Daly">Daly</span>?</h2>
             <P>
-                <button id="botonTomy">🔪😼</button>
-                <button id="botonDaly">🐭💣</button>
+                <label for="botonTomy">💪🏼😼</label>
+                <input type="radio" name="personajes" id="botonTomy"/>
+                <label for="botonDaly">🧨🐭</label>
+                <input type="radio" name="personajes" id="botonDaly"/>
+                <br>
+                <br>
+                <button id="botonPersonaje">Seleccionar</button>
             </P>
         </section>
 
@@ -75,8 +80,8 @@
                 <button id="botonAtaque">Seleccionar</button>
             </p>
 
-            <p><span id="tuPersonaje">Tu personaje</span> tiene <span id="vidasPersonaje">3</span> vidas</p>
-            <p><span id="tuOponente">Tu oponente</span> tiene <span id="vidasOponente">3</span> vidas</p>
+            <p><span id="tuPersonaje">¿?</span> tiene <span id="vidasPersonaje">X</span> vidas</p>
+            <p><span id="tuOponente">¿?</span> tiene <span id="vidasOponente">X</span> vidas</p>
         </section> 
         
         <section>
@@ -85,6 +90,6 @@
         
     </main>
     
-    
+    <script src="arcade.js"></script>
 </body>
 </html>
