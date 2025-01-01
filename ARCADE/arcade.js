@@ -1,5 +1,5 @@
 window.addEventListener("load", iniciarJuego)
-window.addEventListener("load", etapa2)
+window.addEventListener("load", seleccionarAtaque)
 
 // EVENTO DE SELECCIONAR PERSONAJE
 function iniciarJuego(){
@@ -21,11 +21,11 @@ function seleccionarPersonaje() {
 }
 
 // EVENTO DE SELECCIONAR ATAQUE
-function etapa2(){
+function seleccionarAtaque(){
     let botonAtaque = document.querySelector("#botonAtaque")
-    botonAtaque.addEventListener("click", seleccionarAtaque)
+    botonAtaque.addEventListener("click", ataque)
 }
-function seleccionarAtaque() {
+function ataque() {
     if(laser.checked) {
         alert("¡Rayo laser!")
     } else if(cuchillo.checked) {
@@ -41,7 +41,29 @@ function seleccionarAtaque() {
     } else {
         alert("Seleccione un ataque")
     }
+    seleccionAtaqueOponente()
 }
 
+// FUNCION DE NUMEROS ALEATORIOS
+function seleccionAtaqueOponente(){
+    let ataqueAleatorio = aleatorio(1, 6)
+    
+    if(ataqueAleatorio == 1) {
+        //Rayo laser
+    } else if(ataqueAleatorio == 2) {
+        //Cuchillo
+    } else if(ataqueAleatorio == 3) {
+        //Arco y flecha
+    } else if(ataqueAleatorio == 4) {
+        //Bomba
+    } else if(ataqueAleatorio == 5) {
+        //Hacha
+    } else if(ataqueAleatorio == 6) {
+        //Patada
+    }
+}
+function aleatorio(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 
