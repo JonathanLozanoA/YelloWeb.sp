@@ -1,22 +1,20 @@
-window.addEventListener("load", iniciarJuego)
-window.addEventListener("load", seleccionarAtaque)
+let ataqueJugador
 
 // EVENTO DE SELECCIONAR PERSONAJE
 function iniciarJuego(){
-    let botonPersonaje = document.querySelector("#botonPersonaje")
-    botonPersonaje.addEventListener("click", seleccionarPersonaje)
-}
-function seleccionarPersonaje() {
     let tuPersonaje = document.querySelector("#tuPersonaje")
     let tuOponente = document.querySelector("#tuOponente")
-    if(botonTomy.checked) {
+    let botonTomy = document.querySelector("#botonTomy")
+    botonTomy.addEventListener("click", seleccionTomy)
+    let botonDaly = document.querySelector("#botonDaly")
+    botonDaly.addEventListener("click", seleccionDaly)
+    function seleccionTomy(){
         tuPersonaje.innerHTML = "😼Tomy"
         tuOponente.innerHTML = "🐭Daly"
-    } else if(botonDaly.checked){
+    }
+    function seleccionDaly(){
         tuPersonaje.innerHTML = "🐭Daly"
         tuOponente.innerHTML = "😼Tomy"
-    } else {
-        alert("Seleccione un personaje")
     }
 }
 
@@ -27,24 +25,33 @@ function seleccionarAtaque(){
 }
 function ataque() {
     if(laser.checked) {
-        alert("¡Rayo laser!")
+        ataqueJugador = "¡Rayo laser!"
+        alert(ataqueJugador)
     } else if(cuchillo.checked) {
-        alert("¡Cuchillo de cocina!")
+        ataqueJugador = "¡Cuchillo de cocina!"
+        alert(ataqueJugador)
     } else if(arco.checked) {
-        alert("¡Arco y flecha!")
+        ataqueJugador = "¡Arco y flecha!"
+        alert(ataqueJugador)
     } else if(bomba.checked) {
-        alert("¡TNT marca ACME!")
+        ataqueJugador = "¡TNT marca ACME!"
+        alert(ataqueJugador)
     } else if(hacha.checked) {
-        alert("¡Hacha yo te elijo!")
+        ataqueJugador = "¡Hacha yo te elijo!"
+        alert(ataqueJugador)
     } else if(patada.checked) {
-        alert("¡Patada voladora!")
+        ataqueJugador = "¡Patada voladora!"
+        alert(ataqueJugador)
     } else {
         alert("Seleccione un ataque")
     }
     seleccionAtaqueOponente()
 }
 
-// FUNCION DE NUMEROS ALEATORIOS
+//FUNCION DE NUMEROS ALEATORIOS
+function aleatorio(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 function seleccionAtaqueOponente(){
     let ataqueAleatorio = aleatorio(1, 6)
     
@@ -62,8 +69,7 @@ function seleccionAtaqueOponente(){
         //Patada
     }
 }
-function aleatorio(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}
 
-
+//EVENTO DE CARGA COMPLETA
+window.addEventListener("load", iniciarJuego)
+window.addEventListener("load", seleccionarAtaque)
