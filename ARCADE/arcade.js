@@ -1,9 +1,10 @@
+// VARIABLES GLOBALES
 let ataqueJugador
 let ataqueOponente
 let ataqueConTomy = false
 let ataqueConDaly = false
 
-// EVENTO DE SELECCIONAR PERSONAJE
+// SELECCIONAR TU PERSONAJE Y OPONENTE
 function iniciarJuego(){
     
     let tuPersonaje = document.querySelector("#tuPersonaje")
@@ -28,7 +29,7 @@ function iniciarJuego(){
      
 }
 
-// EVENTO DE SELECCIONAR ATAQUE
+// SELECCIONAR TU ATAQUE
 function seleccionarAtaque(){
     
     let botonAtaque = document.querySelector("#botonAtaque")
@@ -59,10 +60,7 @@ function ataque() {
     seleccionAtaqueOponente()
 }
 
-//FUNCION DE NUMEROS ALEATORIOS
-function aleatorio(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}
+// SELECCIONAR ATAQUE OPONENTE
 function seleccionAtaqueOponente(){
     let ataqueAleatorio = aleatorio(1, 6)
     
@@ -81,17 +79,21 @@ function seleccionAtaqueOponente(){
     } else {
         alert(".. y luego el Ataque")
     }
-    crearMensaje()
+    historialBatalla()
+}
+//FUNCION DE NUMEROS ALEATORIOS
+function aleatorio(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-//FUNCION DE CREAR MENSAJES DE BATALLA
-function crearMensaje() {
-    let sectionMensajes = document.querySelector("#mensajes")
+//CREAR HISTORIAL DE BATALLA
+function historialBatalla() {
+    let historialBatalla = document.querySelector("#historialBatalla")
     let newParrafo = document.createElement("p")
-    newParrafo.innerHTML = "mensaje nuevo para modificar"
-    sectionMensajes.appendChild(newParrafo)
+    newParrafo.innerHTML = "Nuevo historial de batalla"
+    historialBatalla.appendChild(newParrafo)
 }
 
-//EVENTO DE CARGA COMPLETA
+//AVISO DE CARGA COMPLETA
 window.addEventListener("load", iniciarJuego)
 window.addEventListener("load", seleccionarAtaque)

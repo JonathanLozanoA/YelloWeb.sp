@@ -6,9 +6,7 @@ body {
     min-height: 100vh;
 }
 
-
-/*||||||HEADER|||||*/
-
+/* HEADER */
 /* LOGO PRINCIPAL */
 h1 {
     text-align: center;
@@ -19,7 +17,6 @@ h1 {
     border-radius: 80px;
     width: 520px;
 }
-
 /* NAVEGADOR PRINCIPAL */
 nav {
     font-size: 50px;
