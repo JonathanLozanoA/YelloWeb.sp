@@ -100,73 +100,91 @@ function combates() {
     let spanVidasOponente = document.querySelector("#vidasOponente")
 
     if(ataqueOponente == ataqueJugador) {
-        historialCombate("EMPATE 🤕")
+        historialCombate("Empate 😤")
     } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Cuchillo de cocina!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Arco y flecha!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡TNT marca ACME!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Hacha yo te elijo!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Patada voladora!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Cuchillo de cocina!" && ataqueOponente == "¡Arco y flecha!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Cuchillo de cocina!" && ataqueOponente == "¡TNT marca ACME!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Cuchillo de cocina!" && ataqueOponente == "¡Patada voladora!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Arco y flecha!" && ataqueOponente == "¡TNT marca ACME!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡Cuchillo de cocina!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡Arco y flecha!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡TNT marca ACME!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡Patada voladora!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Patada voladora!" && ataqueOponente == "¡Arco y flecha!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Patada voladora!" && ataqueOponente == "¡TNT marca ACME!") {
-        historialCombate("!GANASTE! 😎")
+        historialCombate("Ganaste! 😎")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else {
-        historialCombate("PERDISTE 💀")
+        historialCombate("Perdiste 🤕")
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
 
     }
+    revisarVidas()
+}
+
+// REVISAR VIDAS A VER SI HAY GANADOR
+function revisarVidas() {
+    if(vidasJugador == 0) {
+        mensajeFinal("PERDISTE 💀")
+    } else if(vidasOponente == 0) {
+        mensajeFinal("!GANASTE! 🏆")
+    }
+}
+
+// CREAR MENSAJE FINAL
+function mensajeFinal(resultadoFinal) {
+    let historial = document.querySelector("#historial")
+    let newParrafo = document.createElement("p")
+    newParrafo.innerHTML = resultadoFinal
+    historial.appendChild(newParrafo)
 }
 
 // CREAR HISTORIAL DE COMBATES
