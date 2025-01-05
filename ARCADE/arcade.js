@@ -3,11 +3,13 @@ let ataqueJugador
 let ataqueOponente
 let ataqueConTomy = false
 let ataqueConDaly = false
+let vidasJugador = 3
+let vidasOponente = 3
 
-// SELECCIONAR TU PERSONAJE Y OPONENTE
+// SELECCIONAR JUGADOR Y OPONENTE
 function iniciarJuego(){
     
-    let tuPersonaje = document.querySelector("#tuPersonaje")
+    let tuJugador = document.querySelector("#tuJugador")
     let tuOponente = document.querySelector("#tuOponente")
     let botonTomy = document.querySelector("#botonTomy")
     botonTomy.addEventListener("click", seleccionTomy)
@@ -16,13 +18,13 @@ function iniciarJuego(){
     
     
     function seleccionTomy(){
-        tuPersonaje.innerHTML = "😼Tomy"
+        tuJugador.innerHTML = "😼Tomy"
         tuOponente.innerHTML = "🐭Daly"
         ataqueConTomy = true  
         
     }
     function seleccionDaly(){
-        tuPersonaje.innerHTML = "🐭Daly"
+        tuJugador.innerHTML = "🐭Daly"
         tuOponente.innerHTML = "😼Tomy"
         ataqueConDaly = true
     } 
@@ -55,7 +57,7 @@ function ataque() {
         ataqueJugador = "¡Patada voladora!"
         alert(ataqueJugador)
     } else {
-        alert("Seleccione primero al Personaje ..")
+        alert(`Seleccione primero al Jugador ..`)
     }
     seleccionAtaqueOponente()
 }
@@ -65,33 +67,114 @@ function seleccionAtaqueOponente(){
     let ataqueAleatorio = aleatorio(1, 6)
     
     if(ataqueAleatorio == 1 && (ataqueConTomy == true || ataqueConDaly == true)) {
-        alert("Rayo laser")
+        alert("¡Rayo laser!")
+        ataqueOponente = "¡Rayo laser!"
     } else if(ataqueAleatorio == 2 && (ataqueConTomy == true || ataqueConDaly == true)) {
-        alert("Cuchillo")
+        alert("¡Cuchillo de cocina!")
+        ataqueOponente = "¡Cuchillo de cocina!"
     } else if(ataqueAleatorio == 3 && (ataqueConTomy == true || ataqueConDaly == true)) {
-        alert("Arco y flecha")
+        alert("¡Arco y flecha!")
+        ataqueOponente = "¡Arco y flecha!"
     } else if(ataqueAleatorio == 4 && (ataqueConTomy == true || ataqueConDaly == true)) {
-        alert("Bomba")
+        alert("¡TNT marca ACME!")
+        ataqueOponente = "¡TNT marca ACME!"
     } else if(ataqueAleatorio == 5 && (ataqueConTomy == true || ataqueConDaly == true)) {
-        alert("Hacha")
+        alert("¡Hacha yo te elijo!")
+        ataqueOponente = "¡Hacha yo te elijo!"
     } else if(ataqueAleatorio == 6 && (ataqueConTomy == true || ataqueConDaly == true)) {
-        alert("Patada")
+        alert("¡Patada voladora!")
+        ataqueOponente = "¡Patada voladora!"
     } else {
         alert(".. y luego el Ataque")
     }
-    historialBatalla()
+    combates()
 }
 //FUNCION DE NUMEROS ALEATORIOS
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-//CREAR HISTORIAL DE BATALLA
-function historialBatalla() {
-    let historialBatalla = document.querySelector("#historialBatalla")
+// COMBATES Y RESULTADOS
+function combates() {
+    let spanVidasJugador = document.querySelector("#vidasJugador")
+    let spanVidasOponente = document.querySelector("#vidasOponente")
+
+    if(ataqueOponente == ataqueJugador) {
+        historialCombate("EMPATE 🤕")
+    } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Cuchillo de cocina!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Arco y flecha!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡TNT marca ACME!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Hacha yo te elijo!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Patada voladora!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Cuchillo de cocina!" && ataqueOponente == "¡Arco y flecha!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Cuchillo de cocina!" && ataqueOponente == "¡TNT marca ACME!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Cuchillo de cocina!" && ataqueOponente == "¡Patada voladora!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Arco y flecha!" && ataqueOponente == "¡TNT marca ACME!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡Cuchillo de cocina!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡Arco y flecha!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡TNT marca ACME!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡Patada voladora!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Patada voladora!" && ataqueOponente == "¡Arco y flecha!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else if(ataqueJugador == "¡Patada voladora!" && ataqueOponente == "¡TNT marca ACME!") {
+        historialCombate("!GANASTE! 😎")
+        vidasOponente--
+        spanVidasOponente.innerHTML = vidasOponente
+    } else {
+        historialCombate("PERDISTE 💀")
+        vidasJugador--
+        spanVidasJugador.innerHTML = vidasJugador
+
+    }
+}
+
+// CREAR HISTORIAL DE COMBATES
+function historialCombate(resultado) {
+    let historial = document.querySelector("#historial")
     let newParrafo = document.createElement("p")
-    newParrafo.innerHTML = "Nuevo historial de batalla"
-    historialBatalla.appendChild(newParrafo)
+    newParrafo.innerHTML = resultado
+    historial.appendChild(newParrafo)
 }
 
 //AVISO DE CARGA COMPLETA
