@@ -16,20 +16,16 @@ function iniciarJuego(){
     botonTomy.addEventListener("click", seleccionTomy)
     botonDaly.addEventListener("click", seleccionDaly)
     function seleccionTomy(){
-        tuJugador.innerHTML = "😼Tomy"
-        tuOponente.innerHTML = "🐭Daly"
+        tuJugador.innerHTML = " Tomy😼"
+        tuOponente.innerHTML = " Daly🐭"
         ataqueConTomy = true  
         
     }
     function seleccionDaly(){
-        tuJugador.innerHTML = "🐭Daly"
-        tuOponente.innerHTML = "😼Tomy"
+        tuJugador.innerHTML = " Daly🐭"
+        tuOponente.innerHTML = " Tomy😼"
         ataqueConDaly = true
     } 
-    
-    // REINICIAR JUEGO
-    let botonReiniciar = document.querySelector("#botonReiniciar")
-    botonReiniciar.addEventListener("click", reiniciarJuego)
 }
 
 // SELECCIONAR TU ATAQUE
@@ -180,30 +176,32 @@ function combates() {
 function revisarVidas() {
     if(vidasJugador == 0) {
         mensajeFinal("💀GAME OVER💀")
+        crearBotonReiniciar()
     } else if(vidasOponente == 0) {
         mensajeFinal("🏆¡GANASTE!🏆")
+        crearBotonReiniciar()
     }
     // DESACTIVAR BOTONES DE JUGADORES DESPUES DE SELECCIONAR ATAQUE
     let botonTomy = document.querySelector("#botonTomy")
     botonTomy.disabled = true
     let botonDaly = document.querySelector("#botonDaly")
     botonDaly.disabled = true
-    // botonReiniciar()
 }
 
 // BOTON REINICIAR JUEGO
-// function botonReiniciar() {
-//   let botonReiniciar = document.querySelector("#botonReiniciar")
-//   botonReiniciar.addEventListener("click", reiniciarJuego)
-// }
-// function reiniciarJuego() {
-//   location.reload()
-// }  ^^ ESTE CODIGO SIRVE/PARA CREAR BOTON REINICIO EN MENSAJE FINAL^^
-
-// BOTON REINICIAR JUEGO
-function reiniciarJuego() {
-    location.reload()
-}
+function crearBotonReiniciar() {
+    let seccionReiniciar = document.querySelector("#seccionReiniciar")
+    let botonReiniciar = document.createElement("button")
+    botonReiniciar.innerHTML = "Reiniciar Juego"
+  
+    seccionReiniciar.appendChild(botonReiniciar)
+    botonReiniciar.addEventListener("click", reiniciarJuego)
+  }
+  
+  // BOTON REINICIAR JUEGO
+  function reiniciarJuego() {
+      location.reload()
+  }
 
 // MENSAJE FINAL
 function mensajeFinal(resultadoFinal) {
