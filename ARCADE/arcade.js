@@ -6,17 +6,15 @@ let ataqueConDaly = false
 let vidasJugador = 3
 let vidasOponente = 3
 
-// SELECCIONAR JUGADOR Y OPONENTE
+// SELECCIONAR TU JUGADOR Y OPONENTE
 function iniciarJuego(){
-    
     let tuJugador = document.querySelector("#tuJugador")
     let tuOponente = document.querySelector("#tuOponente")
     let botonTomy = document.querySelector("#botonTomy")
-    botonTomy.addEventListener("click", seleccionTomy)
     let botonDaly = document.querySelector("#botonDaly")
+    
+    botonTomy.addEventListener("click", seleccionTomy)
     botonDaly.addEventListener("click", seleccionDaly)
-    
-    
     function seleccionTomy(){
         tuJugador.innerHTML = "😼Tomy"
         tuOponente.innerHTML = "🐭Daly"
@@ -28,44 +26,51 @@ function iniciarJuego(){
         tuOponente.innerHTML = "😼Tomy"
         ataqueConDaly = true
     } 
-     
+    
+    // REINICIAR JUEGO
+    let botonReiniciar = document.querySelector("#botonReiniciar")
+    botonReiniciar.addEventListener("click", reiniciarJuego)
 }
 
 // SELECCIONAR TU ATAQUE
 function seleccionarAtaque(){
-    
     let botonAtaque = document.querySelector("#botonAtaque")
     botonAtaque.addEventListener("click", ataque)
+    
 }
 function ataque() {
     if(laser.checked && (ataqueConTomy == true || ataqueConDaly == true)) {
         ataqueJugador = "¡Rayo laser!"
         alert(ataqueJugador)
+        seleccionAtaqueOponente()
     } else if(cuchillo.checked && (ataqueConTomy == true || ataqueConDaly == true)) {
         ataqueJugador = "¡Cuchillo de cocina!"
         alert(ataqueJugador)
-    } else if(arco.checked && (ataqueConTomy == true || ataqueConDaly == true)) {
+        seleccionAtaqueOponente()
+    } else if(arcoFlecha.checked && (ataqueConTomy == true || ataqueConDaly == true)) {
         ataqueJugador = "¡Arco y flecha!"
         alert(ataqueJugador)
-    } else if(bomba.checked && (ataqueConTomy == true || ataqueConDaly == true)) {
+        seleccionAtaqueOponente()
+    } else if(bombaTnt.checked && (ataqueConTomy == true || ataqueConDaly == true)) {
         ataqueJugador = "¡TNT marca ACME!"
         alert(ataqueJugador)
+        seleccionAtaqueOponente()
     } else if(hacha.checked && (ataqueConTomy == true || ataqueConDaly == true)) {
         ataqueJugador = "¡Hacha yo te elijo!"
         alert(ataqueJugador)
+        seleccionAtaqueOponente()
     } else if(patada.checked && (ataqueConTomy == true || ataqueConDaly == true)) {
         ataqueJugador = "¡Patada voladora!"
         alert(ataqueJugador)
+        seleccionAtaqueOponente()
     } else {
-        alert(`Seleccione primero al Jugador ..`)
+        alert("Seleccione primero al Jugador y luego el Ataque")
     }
-    seleccionAtaqueOponente()
 }
 
 // SELECCIONAR ATAQUE OPONENTE
 function seleccionAtaqueOponente(){
     let ataqueAleatorio = aleatorio(1, 6)
-    
     if(ataqueAleatorio == 1 && (ataqueConTomy == true || ataqueConDaly == true)) {
         alert("¡Rayo laser!")
         ataqueOponente = "¡Rayo laser!"
@@ -85,10 +90,12 @@ function seleccionAtaqueOponente(){
         alert("¡Patada voladora!")
         ataqueOponente = "¡Patada voladora!"
     } else {
-        alert(".. y luego el Ataque")
+        alert("Seleccione primero al Jugador y luego el Ataque")
     }
     combates()
+    
 }
+
 //FUNCION DE NUMEROS ALEATORIOS
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -98,74 +105,73 @@ function aleatorio(min, max) {
 function combates() {
     let spanVidasJugador = document.querySelector("#vidasJugador")
     let spanVidasOponente = document.querySelector("#vidasOponente")
-
+    
     if(ataqueOponente == ataqueJugador) {
         historialCombate("Empate 😤")
     } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Cuchillo de cocina!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Arco y flecha!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡TNT marca ACME!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Hacha yo te elijo!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Rayo laser!" && ataqueOponente == "¡Patada voladora!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Cuchillo de cocina!" && ataqueOponente == "¡Arco y flecha!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Cuchillo de cocina!" && ataqueOponente == "¡TNT marca ACME!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Cuchillo de cocina!" && ataqueOponente == "¡Patada voladora!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Arco y flecha!" && ataqueOponente == "¡TNT marca ACME!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡Cuchillo de cocina!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡Arco y flecha!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡TNT marca ACME!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Hacha yo te elijo!" && ataqueOponente == "¡Patada voladora!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Patada voladora!" && ataqueOponente == "¡Arco y flecha!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "¡Patada voladora!" && ataqueOponente == "¡TNT marca ACME!") {
-        historialCombate("Ganaste! 😎")
+        historialCombate("Bien! 💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else {
         historialCombate("Perdiste 🤕")
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
-
     }
     revisarVidas()
 }
@@ -173,21 +179,57 @@ function combates() {
 // REVISAR VIDAS A VER SI HAY GANADOR
 function revisarVidas() {
     if(vidasJugador == 0) {
-        mensajeFinal("PERDISTE 💀")
+        mensajeFinal("💀GAME OVER💀")
     } else if(vidasOponente == 0) {
-        mensajeFinal("!GANASTE! 🏆")
+        mensajeFinal("🏆¡GANASTE!🏆")
     }
+    // DESACTIVAR BOTONES DE JUGADORES DESPUES DE SELECCIONAR ATAQUE
+    let botonTomy = document.querySelector("#botonTomy")
+    botonTomy.disabled = true
+    let botonDaly = document.querySelector("#botonDaly")
+    botonDaly.disabled = true
+    // botonReiniciar()
 }
 
-// CREAR MENSAJE FINAL
+// BOTON REINICIAR JUEGO
+// function botonReiniciar() {
+//   let botonReiniciar = document.querySelector("#botonReiniciar")
+//   botonReiniciar.addEventListener("click", reiniciarJuego)
+// }
+// function reiniciarJuego() {
+//   location.reload()
+// }  ^^ ESTE CODIGO SIRVE/PARA CREAR BOTON REINICIO EN MENSAJE FINAL^^
+
+// BOTON REINICIAR JUEGO
+function reiniciarJuego() {
+    location.reload()
+}
+
+// MENSAJE FINAL
 function mensajeFinal(resultadoFinal) {
     let historial = document.querySelector("#historial")
     let newParrafo = document.createElement("p")
     newParrafo.innerHTML = resultadoFinal
     historial.appendChild(newParrafo)
+
+    // DESACTIVAR BOTON SELECCIONAR Y ATAQUES AL FINALIZAR JUEGO
+    let desactivarBoton = document.querySelector("#botonAtaque")
+    desactivarBoton.disabled = true
+    let laserInput = document.querySelector("#laser")
+    laserInput.disabled = true
+    let cuchilloInput = document.querySelector("#cuchillo")
+    cuchilloInput.disabled = true
+    let arcoFlechaInput = document.querySelector("#arcoFlecha")
+    arcoFlechaInput.disabled = true
+    let bombaTntInput = document.querySelector("#bombaTnt")
+    bombaTntInput.disabled = true
+    let hachaInput = document.querySelector("#hacha")
+    hachaInput.disabled = true
+    let patadaInput = document.querySelector("#patada")
+    patadaInput.disabled = true
 }
 
-// CREAR HISTORIAL DE COMBATES
+// HISTORIAL DE COMBATES
 function historialCombate(resultado) {
     let historial = document.querySelector("#historial")
     let newParrafo = document.createElement("p")
@@ -195,6 +237,6 @@ function historialCombate(resultado) {
     historial.appendChild(newParrafo)
 }
 
-//AVISO DE CARGA COMPLETA
+// EVENTO CARGA COMPLETA DEL HTML
 window.addEventListener("load", iniciarJuego)
 window.addEventListener("load", seleccionarAtaque)
