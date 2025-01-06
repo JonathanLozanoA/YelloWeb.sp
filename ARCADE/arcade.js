@@ -35,7 +35,7 @@ function iniciarJuego(){
         tuOponente.innerHTML = " Daly🐭"
         ataqueConTomy = true          
     }
-    
+
     function seleccionDaly(){
         // OCULTAR SECCION
         let ocultarSeccionJugador = document.querySelector("#seleccionJugador")
@@ -228,10 +228,10 @@ function crearBotonReiniciar() {
 
 // MENSAJE FINAL
 function mensajeFinal(resultadoFinal) {
-    let historial = document.querySelector("#historial")
+    let mensajeFinal = document.querySelector("#mensajeFinal")
     let newParrafo = document.createElement("p")
     newParrafo.innerHTML = resultadoFinal
-    historial.appendChild(newParrafo)
+    mensajeFinal.appendChild(newParrafo)
 
     // DESACTIVAR BOTON SELECCIONAR Y ATAQUES AL FINALIZAR JUEGO
     let desactivarBoton = document.querySelector("#botonAtaque")
