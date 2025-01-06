@@ -8,6 +8,12 @@ let vidasOponente = 3
 
 // SELECCIONAR TU JUGADOR Y OPONENTE
 function iniciarJuego(){
+    // OCULTAR SECCION
+    let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
+    ocultarSeccionSeleccionAtaque.style.display = "none"
+    let ocultarSeccionHistorial = document.querySelector("#historial")
+    ocultarSeccionHistorial.style.display = "none"
+    //
     let tuJugador = document.querySelector("#tuJugador")
     let tuOponente = document.querySelector("#tuOponente")
     let botonTomy = document.querySelector("#botonTomy")
@@ -15,25 +21,42 @@ function iniciarJuego(){
     
     botonTomy.addEventListener("click", seleccionTomy)
     botonDaly.addEventListener("click", seleccionDaly)
+    
     function seleccionTomy(){
+        // OCULTAR SECCION
+        let ocultarSeccionJugador = document.querySelector("#seleccionJugador")
+        ocultarSeccionJugador.style.display = "none"
+        let ocultarSeccionHistorial = document.querySelector("#historial")
+        ocultarSeccionHistorial.style.display = "block"
+        let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
+        ocultarSeccionSeleccionAtaque.style.display = "block"
+        //
         tuJugador.innerHTML = " Tomy😼"
         tuOponente.innerHTML = " Daly🐭"
-        ataqueConTomy = true  
-        
+        ataqueConTomy = true          
     }
+    
     function seleccionDaly(){
+        // OCULTAR SECCION
+        let ocultarSeccionJugador = document.querySelector("#seleccionJugador")
+        ocultarSeccionJugador.style.display = "none"
+        let ocultarSeccionHistorial = document.querySelector("#historial")
+        ocultarSeccionHistorial.style.display = "block"
+        let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
+        ocultarSeccionSeleccionAtaque.style.display = "block"
+        //
         tuJugador.innerHTML = " Daly🐭"
         tuOponente.innerHTML = " Tomy😼"
         ataqueConDaly = true
-    } 
+    }
 }
 
 // SELECCIONAR TU ATAQUE
 function seleccionarAtaque(){
     let botonAtaque = document.querySelector("#botonAtaque")
     botonAtaque.addEventListener("click", ataque)
-    
 }
+
 function ataque() {
     if(laser.checked && (ataqueConTomy == true || ataqueConDaly == true)) {
         ataqueJugador = "¡Rayo laser!"
