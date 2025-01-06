@@ -13,6 +13,13 @@ h1 {
     margin: 20px auto;
     padding: 00 10px 0;
 }
+h2 {
+   background-color: yellow; 
+   width: 235px;
+   height: 35px;
+   border-radius: 20px;
+   padding: 1px 0 0 17px;
+}
 #imgH1 {
     border-radius: 80px;
     width: 520px;
