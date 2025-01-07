@@ -228,6 +228,10 @@ function crearBotonReiniciar() {
 
 // MENSAJE FINAL
 function mensajeFinal(resultadoFinal) {
+    // OCULTAR SECCION
+    let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
+    ocultarSeccionSeleccionAtaque.style.display = "none"
+    //
     let mensajeFinal = document.querySelector("#mensajeFinal")
     let newParrafo = document.createElement("p")
     newParrafo.innerHTML = resultadoFinal
