@@ -81,6 +81,16 @@ h2 {
     padding: 10px 0 0 14px;
 }
 
+#botonTomy, #botonDaly {
+    border-radius: 18px;
+    border: 3px solid lightgray;
+    width: 90px;
+    height: 50px;
+    font-size: 25px;
+    padding: 7px;
+    margin: 0 10px; 
+}
+
 /* #inicioJuego {
     display: flex;
     flex-direction: column;
