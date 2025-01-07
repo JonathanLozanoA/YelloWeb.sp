@@ -29,70 +29,69 @@
 </head>
 
 <body>
-    <header>
-        <!-- LOGO DE ARCADE -->
-        <h1><a href="../index.html" target="_self"><img id="imgH1" src="IMG/Logo-the-simpshop-arcade.png" alt="Tienda online the Simpshop"/></a></h1>
-        <hr />
-        <!-- NAVEGADOR PRINCIPAL -->
-        <nav>
-            <a href="index.html">Arcade</a>
-            <a href="../FANSHOP/index.html" target="_blank">FanShop</a>
-            <a href="../GOLPLEX/index.html" target="_blank">Golplex</a>
-            <a href="../CANAL6/index.html" target="_blank">Canal 6</a>
-            <span></span>
-        </nav>
-    </header>
-   
-    <main>
+<header>
+    <!-- LOGO DE ARCADE -->
+    <h1><a href="../index.html" target="_self"><img id="imgH1" src="IMG/Logo-the-simpshop-arcade.png" alt="Tienda online the Simpshop"/></a></h1>
+    <hr />
+    <!-- NAVEGADOR PRINCIPAL -->
+    <nav>
+        <a href="index.html">Arcade</a>
+        <a href="../FANSHOP/index.html" target="_blank">FanShop</a>
+        <a href="../GOLPLEX/index.html" target="_blank">Golplex</a>
+        <a href="../CANAL6/index.html" target="_blank">Canal 6</a>
+        <span></span>
+    </nav>
+</header>
+
+<main>
+    <section id="inicioJuego">
         <!-- TITULO -->
         <h2>😼¿Tomy o Daly?🐭</h2>
         <!-- BOTON REINICIAR -->
-        
-        <section id="mensajeFinal">
-        </section>
-        <section id="seccionReiniciar">
-        </section>
+        <span id="mensajeFinal"></span>
+        <span id="seccionReiniciar"></span>
+    </section>
 
-        <!-- JUGADORES DISPONIBLES -->
-        <section id="seleccionJugador">
-            <p>
-                <button id="botonTomy">😼🔪</button>
-                <button id="botonDaly">🪓🐭</button>
-           </p>
-        </section>
+    <!-- JUGADORES DISPONIBLES -->
+    <section id="seleccionJugador">
+        <p id="botonesSeleccionJugador">
+            <button id="botonTomy">😼🔪</button>
+            <button id="botonDaly">🪓🐭</button>
+        </p>
+    </section>
 
-        <!-- ATAQUES DISPONIBLES  -->
-        <section id="seleccionAtaque">
-            <h2>Elige Ataque:</h2>
-            <p>
-                <label for="cuchillo">🔪</label>
-                <input type="radio" name="ataques" id="cuchillo"/>
-                <label for="laser">🔫</label>
-                <input type="radio" name="ataques" id="laser"/>
-                <label for="arcoFlecha">🏹</label>
-                <input type="radio" name="ataques" id="arcoFlecha"/>
-                <br>
-                <br>
-                <label for="hacha">🪓</label>
-                <input type="radio" name="ataques" id="hacha"/>
-                <label for="bombaTnt">💣</label>
-                <input type="radio" name="ataques" id="bombaTnt"/>
-                <label for="patada">🤸🏼‍♂️</label>
-                <input type="radio" name="ataques" id="patada"/>
-                <br>
-                <br>
-                <button id="botonAtaque">ATACAR</button>
-            </p>
-        </section>
+    <!-- ATAQUES DISPONIBLES  -->
+    <section id="seleccionAtaque">
+        <h3>Elige Ataque:</h3>
+        <p>
+            <label for="cuchillo">🔪</label>
+            <input type="radio" name="ataques" id="cuchillo"/>
+            <label for="laser">🔫</label>
+            <input type="radio" name="ataques" id="laser"/>
+            <label for="arcoFlecha">🏹</label>
+            <input type="radio" name="ataques" id="arcoFlecha"/>
+            <!-- <br>
+            <br> -->
+            <label for="hacha">🪓</label>
+            <input type="radio" name="ataques" id="hacha"/>
+            <label for="bombaTnt">💣</label>
+            <input type="radio" name="ataques" id="bombaTnt"/>
+            <label for="patada">🤸🏼‍♂️</label>
+            <input type="radio" name="ataques" id="patada"/>
+            <br>
+            <br>
+            <button id="botonAtaque">ATACAR</button>
+        </p>
+    </section>
 
-        <!-- HISTORIAL DE COMBATES -->
-        <section id="historial">
-            <p>Tu<span id="tuJugador"> ¿?</span> tiene <span id="vidasJugador">3</span> vidas</p>
-            <p>El<span id="tuOponente"> ¿?</span> tiene <span id="vidasOponente">3</span> vidas</p>
-            <h4 id="tituloHistorial">Historial de combates:</h4>
-        </section> 
-   </main>
-    
-    <script src="arcade.js"></script>
+    <!-- HISTORIAL DE COMBATES -->
+    <section id="historial">
+        <p>Tu<span id="tuJugador"> ¿?</span> tiene <span id="vidasJugador">3</span> vidas</p>
+        <p>El<span id="tuOponente"> ¿?</span> tiene <span id="vidasOponente">3</span> vidas</p>
+        <h4 id="tituloHistorial">Historial de combates:</h4>
+    </section> 
+</main>
+
+<script src="arcade.js"></script>
 </body>
 </html>
