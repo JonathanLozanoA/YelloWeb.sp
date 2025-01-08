@@ -31,8 +31,8 @@ function iniciarJuego(){
         let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
         ocultarSeccionSeleccionAtaque.style.display = "block"
         //
-        tuJugador.innerHTML = " Tomy😼"
-        tuOponente.innerHTML = " Daly🐭"
+        tuJugador.innerHTML = "😼Tomy: "
+        tuOponente.innerHTML = "🐭Daly: "
         ataqueConTomy = true          
     }
 
@@ -45,8 +45,8 @@ function iniciarJuego(){
         let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
         ocultarSeccionSeleccionAtaque.style.display = "block"
         //
-        tuJugador.innerHTML = " Daly🐭"
-        tuOponente.innerHTML = " Tomy😼"
+        tuJugador.innerHTML = "🐭Daly: "
+        tuOponente.innerHTML = "😼Tomy: "
         ataqueConDaly = true
     }
 }
@@ -83,7 +83,7 @@ function ataque() {
         alert(ataqueJugador)
         seleccionAtaqueOponente()
     } else {
-        alert("Seleccione primero al Jugador y luego el Ataque")
+        alert("Seleccione primero un ataque 🧨")
     }
 }
 
@@ -109,7 +109,7 @@ function seleccionAtaqueOponente(){
         alert("¡Patada voladora!")
         ataqueOponente = "¡Patada voladora!"
     } else {
-        alert("Seleccione primero al Jugador y luego el Ataque")
+        alert("Seleccione primero un ataque 🧨")
     }
     combates()
     

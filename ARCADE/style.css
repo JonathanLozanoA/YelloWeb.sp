@@ -73,12 +73,12 @@ main {
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 35px;
     background-color: #ffd90f;
-    width: 235px;
+    width: 240px;
     height: 44px;
     border-radius: 20px;
-    padding: 10px 0 0 14px;
+    padding: 10px 14px 10px 35px;
 }
 
 #botonTomy, #botonDaly {
