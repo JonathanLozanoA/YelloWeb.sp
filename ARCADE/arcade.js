@@ -198,10 +198,10 @@ function combates() {
 // REVISAR VIDAS A VER SI HAY GANADOR
 function revisarVidas() {
     if(vidasJugador == 0) {
-        mensajeFinal("💀GAME OVER💀")
+        mensajeFinal("😱💀GAME OVER💀😱")
         crearBotonReiniciar()
     } else if(vidasOponente == 0) {
-        mensajeFinal("🏆¡GANASTE!🏆")
+        mensajeFinal("✨🏆¡GANASTE!🏆✨")
         crearBotonReiniciar()
     }
     // DESACTIVAR BOTONES DE JUGADORES DESPUES DE SELECCIONAR ATAQUE
@@ -232,6 +232,7 @@ function mensajeFinal(resultadoFinal) {
     let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
     ocultarSeccionSeleccionAtaque.style.display = "none"
     //
+
     let mensajeFinal = document.querySelector("#mensajeFinal")
     let newParrafo = document.createElement("p")
     newParrafo.innerHTML = resultadoFinal
