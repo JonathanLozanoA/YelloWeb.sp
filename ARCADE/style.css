@@ -1,3 +1,6 @@
+/* * {
+    padding: 0;
+} */
 body {
     justify-content: center;
     background-color: #fafafa;
@@ -74,15 +77,21 @@ main {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 44px;
     background-color: #ffd90f;
-    width: 420px;
+    width: 550px;
     height: 44px;
     border-radius: 20px;
-    padding: 10px 14px 10px 35px;
+    padding: 10px 4px 24px 36px;
 }
 
 #botonTomy, #botonDaly {
+    padding: 0;
+    height: 282.3px;
+}
+
+
+/* #botonTomy, #botonDaly {
     border-radius: 18px;
     border: 3px solid lightgray;
     width: 90px;
@@ -90,4 +99,4 @@ h2 {
     font-size: 25px;
     padding: 7px;
     margin: 0 10px; 
-}
+} */

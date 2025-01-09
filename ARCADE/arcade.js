@@ -84,15 +84,14 @@ function ataque() {
         alert("Seleccione primero un ataque 🧨")
         ataqueJugador = ""
     }
-
     ataqueTuJugador.innerHTML = ataqueJugador    
 }
 
 // SELECCIONAR ATAQUE OPONENTE
 function seleccionAtaqueOponente(){
     let ataqueTuOponente = document.querySelector("#ataqueTuOponente")
-
     let ataqueAleatorio = aleatorio(1, 6)
+
     if(ataqueAleatorio == 1 && (ataqueConTomy == true || ataqueConDaly == true)) {
         ataqueOponente = "CUCHILLO!"
     } else if(ataqueAleatorio == 2 && (ataqueConTomy == true || ataqueConDaly == true)) {
@@ -110,7 +109,6 @@ function seleccionAtaqueOponente(){
         ataqueOponente = ""
     }
     combates()
-
     ataqueTuOponente.innerHTML = ataqueOponente
     
 }
@@ -239,20 +237,20 @@ function mensajeFinal(resultadoFinal) {
     mensajeFinal.appendChild(newParrafo)
 
     // DESACTIVAR BOTON SELECCIONAR Y ATAQUES AL FINALIZAR JUEGO
-    let desactivarBoton = document.querySelector("#botonAtaque")
-    desactivarBoton.disabled = true
-    let rayoLaserInput = document.querySelector("#rayoLaser")
-    rayoLaserInput.disabled = true
-    let cuchilloInput = document.querySelector("#cuchillo")
-    cuchilloInput.disabled = true
-    let cactusInput = document.querySelector("#cactus")
-    cactusInput.disabled = true
-    let bombaAcmeInput = document.querySelector("#bombaAcme")
-    bombaAcmeInput.disabled = true
-    let hachaInput = document.querySelector("#hacha")
-    hachaInput.disabled = true
-    let ganchoInput = document.querySelector("#gancho")
-    ganchoInput.disabled = true
+    // let desactivarBoton = document.querySelector("#botonAtaque")
+    // desactivarBoton.disabled = true
+    // let rayoLaserInput = document.querySelector("#rayoLaser")
+    // rayoLaserInput.disabled = true
+    // let cuchilloInput = document.querySelector("#cuchillo")
+    // cuchilloInput.disabled = true
+    // let cactusInput = document.querySelector("#cactus")
+    // cactusInput.disabled = true
+    // let bombaAcmeInput = document.querySelector("#bombaAcme")
+    // bombaAcmeInput.disabled = true
+    // let hachaInput = document.querySelector("#hacha")
+    // hachaInput.disabled = true
+    // let ganchoInput = document.querySelector("#gancho")
+    // ganchoInput.disabled = true
 }
 
 // HISTORIAL DE COMBATES
