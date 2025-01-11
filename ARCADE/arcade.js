@@ -28,7 +28,7 @@ function iniciarJuego(){
         let ocultarSeccionJugador = document.querySelector("#seleccionJugador")
         ocultarSeccionJugador.style.display = "none"
         let ocultarSeccionHistorial = document.querySelector("#historial")
-        ocultarSeccionHistorial.style.display = "block"
+        ocultarSeccionHistorial.style.display = "none"
         let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
         ocultarSeccionSeleccionAtaque.style.display = "block"
         //
@@ -43,7 +43,7 @@ function iniciarJuego(){
         let ocultarSeccionJugador = document.querySelector("#seleccionJugador")
         ocultarSeccionJugador.style.display = "none"
         let ocultarSeccionHistorial = document.querySelector("#historial")
-        ocultarSeccionHistorial.style.display = "block"
+        ocultarSeccionHistorial.style.display = "none"
         let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
         ocultarSeccionSeleccionAtaque.style.display = "block"
         //
@@ -60,6 +60,12 @@ function seleccionarAtaque(){
 }
 
 function ataque() {
+    // OCULTAR SECCION
+    let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
+    ocultarSeccionSeleccionAtaque.style.display = "none"
+    let ocultarSeccionHistorial = document.querySelector("#historial")
+    ocultarSeccionHistorial.style.display = "block"
+    //
     let ataqueTuJugador = document.querySelector("#ataqueTuJugador")
     
     if(cuchillo.checked && (ataqueConTomy == true || ataqueConDaly == true)) {
@@ -83,6 +89,10 @@ function ataque() {
     } else {
         alert("Seleccione primero un ataque 🧨")
         ataqueJugador = ""
+        let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
+        ocultarSeccionSeleccionAtaque.style.display = "block"
+        let ocultarSeccionHistorial = document.querySelector("#historial")
+        ocultarSeccionHistorial.style.display = "none"
     }
     ataqueTuJugador.innerHTML = ataqueJugador    
 }
@@ -202,6 +212,10 @@ function revisarVidas() {
         mensajeFinal("✨🏆¡GANASTE!🏆✨")
         crearBotonReiniciar()
     }
+    // CONTRA ATAQUE
+    let contraAtacar = document.querySelector("#contraAtacar")
+    contraAtacar.addEventListener("click", contra)
+
     // DESACTIVAR BOTONES DE JUGADORES DESPUES DE SELECCIONAR ATAQUE
     let botonTomy = document.querySelector("#botonTomy")
     botonTomy.disabled = true
@@ -209,20 +223,33 @@ function revisarVidas() {
     botonDaly.disabled = true
 }
 
+// CONTRA ATAQUE
+function contra() {
+    let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
+    ocultarSeccionSeleccionAtaque.style.display = "block"
+    let ocultarSeccionHistorial = document.querySelector("#historial")
+        ocultarSeccionHistorial.style.display = "none"
+}
+
 // BOTON REINICIAR JUEGO
 function crearBotonReiniciar() {
+    // OCULTAR SECCION
+    let contraAtacar = document.querySelector("#contraAtacar")
+    contraAtacar.style.display = "none"
+
     let seccionReiniciar = document.querySelector("#seccionReiniciar")
     let botonReiniciar = document.createElement("button")
     botonReiniciar.innerHTML = "Reiniciar Juego"
+    botonReiniciar.id = "botonReiniciar"
   
     seccionReiniciar.appendChild(botonReiniciar)
     botonReiniciar.addEventListener("click", reiniciarJuego)
   }
   
-  // BOTON REINICIAR JUEGO
-  function reiniciarJuego() {
-      location.reload()
-  }
+// BOTON REINICIAR JUEGO
+function reiniciarJuego() {
+    location.reload()
+}
 
 // MENSAJE FINAL
 function mensajeFinal(resultadoFinal) {
