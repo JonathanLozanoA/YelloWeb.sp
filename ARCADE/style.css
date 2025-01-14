@@ -1,4 +1,7 @@
-
+* {
+    /* PROPIEDAD PARA AJUSTAR EL TAMAÑO (PADDIGN) APLICAR EN TODOS LOS PROYECTOS*/
+    box-sizing: border-box;
+}
 body {
     display: flexbox;
     justify-content: center;
@@ -28,7 +31,7 @@ nav {
     position: relative;
     background-color: #ffd90f;
     border-radius: 20px;
-    width: 939px;
+    width: 950px;
     height: 60px;
     display: flexbox;
     justify-content: center;
@@ -83,9 +86,9 @@ h2 {
     font-size: 44px;
     background-color: #ffd90f;
     width: 550px;
-    height: 44px;
+    height: 80px;
     border-radius: 20px;
-    padding: 10px 4px 24px 36px;
+    padding: 10px 4px 24px 20px;
 }
 
 #botonTomy, #botonDaly {
