@@ -1,8 +1,10 @@
 * {
    margin: 0px;
    padding: 0px;
+   box-sizing: border-box
 }
 body {
+   display: flex;
     justify-content: center;
     background-color: #fffdc1;
     font-family: Franklin Gothic Medium;
@@ -39,7 +41,7 @@ nav {
    padding: 0 2px 0 30px;
    margin: 50px auto;
    position: relative;
-   width: 1015px;
+   width: 1048px;
    height: 60px;
    background-color: #ffd90f;
    border-radius: 20px;
