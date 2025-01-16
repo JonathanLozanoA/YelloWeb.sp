@@ -81,7 +81,7 @@ main {
 
 
 #fondoTomyDaly img {
-    background-image: url('../ARCADE/IMG/FondoTomyDaly2.jpg');
+    /* background-image: url('../ARCADE/IMG/FondoTomyDaly2.jpg'); */
     display: inline-block;
     width: 100%;
     /* display: flex; */
