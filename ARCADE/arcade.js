@@ -134,69 +134,69 @@ function combates() {
     let spanVidasOponente = document.querySelector("#vidasOponente")
     
     if(ataqueJugador == ataqueOponente) {
-        historialCombate("😤Empate")
+        historialCombate("Empate😤")
     } else if(ataqueJugador == "RAYO LASER!" && ataqueOponente == "CUCHILLO!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "RAYO LASER!" && ataqueOponente == "CACTUS!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "RAYO LASER!" && ataqueOponente == "BOMBA ACME!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "RAYO LASER!" && ataqueOponente == "HACHA!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "RAYO LASER!" && ataqueOponente == "GANCHO!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "CUCHILLO!" && ataqueOponente == "CACTUS!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "CUCHILLO!" && ataqueOponente == "BOMBA ACME!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "CUCHILLO!" && ataqueOponente == "GANCHO!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "CACTUS!" && ataqueOponente == "BOMBA ACME!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "HACHA!" && ataqueOponente == "CUCHILLO!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "HACHA!" && ataqueOponente == "CACTUS!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "HACHA!" && ataqueOponente == "BOMBA ACME!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "HACHA!" && ataqueOponente == "GANCHO!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "GANCHO!" && ataqueOponente == "CACTUS!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else if(ataqueJugador == "GANCHO!" && ataqueOponente == "BOMBA ACME!") {
-        historialCombate("💪Victoria!")
+        historialCombate("Victoria!💪")
         vidasOponente--
         spanVidasOponente.innerHTML = vidasOponente
     } else {
-        historialCombate("🤕Perdiste")
+        historialCombate("Perdiste🤕")
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     }
@@ -206,7 +206,7 @@ function combates() {
 // REVISAR VIDAS A VER SI HAY GANADOR
 function revisarVidas() {
     if(vidasJugador == 0) {
-        mensajeFinal("😱💀GAME OVER💀😱")
+        mensajeFinal("💀GAME OVER💀")
         crearBotonReiniciar()
     } else if(vidasOponente == 0) {
         mensajeFinal("✨🏆¡GANASTE!🏆✨")
@@ -237,12 +237,12 @@ function crearBotonReiniciar() {
     let contraAtacar = document.querySelector("#contraAtacar")
     contraAtacar.style.display = "none"
 
-    let seccionReiniciar = document.querySelector("#seccionReiniciar")
+    let reiniciar = document.querySelector("#reiniciar")
     let botonReiniciar = document.createElement("button")
     botonReiniciar.innerHTML = "Reiniciar Juego"
     botonReiniciar.id = "botonReiniciar"
   
-    seccionReiniciar.appendChild(botonReiniciar)
+    reiniciar.appendChild(botonReiniciar)
     botonReiniciar.addEventListener("click", reiniciarJuego)
   }
   
@@ -256,6 +256,8 @@ function mensajeFinal(resultadoFinal) {
     // OCULTAR SECCION
     let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
     ocultarSeccionSeleccionAtaque.style.display = "none"
+    let ocultarSeccionHistorial = document.querySelector("#historial")
+    ocultarSeccionHistorial.style.display = "none"
     //
 
     let mensajeFinal = document.querySelector("#mensajeFinal")

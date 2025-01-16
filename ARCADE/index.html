@@ -53,52 +53,53 @@
         
         <!-- BOTON REINICIAR -->
         <span id="mensajeFinal"></span>
-        <span id="seccionReiniciar"></span>
-    </section>
+        <span id="reiniciar"></span>
 
-    <!-- JUGADORES DISPONIBLES -->
-    <section id="seleccionJugador">
-        <p id="botonesSeleccionJugador">
-            <button id="botonTomy" href=""><img src="./IMG/PersonajeTomy.jpg" alt="Personaje de Tomy"/></button>
-            <button id="botonDaly" href=""><img src="./IMG/PersonajeDaly.jpg" alt="Personaje de Daly"/></button>
-        </p>
-    </section>
-
-  <!-- ATAQUES DISPONIBLES  -->
+        <!-- JUGADORES DISPONIBLES -->
+        <section id="seleccionJugador">
+            <p id="botonesSeleccionJugador">
+                <button id="botonTomy" href=""><img src="./IMG/PersonajeTomy.jpg" alt="Personaje de Tomy"/></button>
+                <button id="botonDaly" href=""><img src="./IMG/PersonajeDaly.jpg" alt="Personaje de Daly"/></button>
+            </p>
+        </section>
+    </section>   
+    
+    <!-- ATAQUES DISPONIBLES  -->
     <section id="seleccionAtaque">
-        <h3>Elige tu Ataque:</h3>
+        <h3>Elige un Ataque:</h3>
         <p>
-            <label for="cuchillo">🔪</label>
+            <label class="ataques" for="cuchillo">🔪</label>
             <input type="radio" name="ataques" id="cuchillo"/>
-            <label for="rayoLaser">🔫</label>
+            <label class="ataques" for="rayoLaser">🔫</label>
             <input type="radio" name="ataques" id="rayoLaser"/>
-            <label for="cactus">🌵</label>
+            <label class="ataques" for="cactus">🌵</label>
             <input type="radio" name="ataques" id="cactus"/>
             <br>
-            <label for="hacha">🪓</label>
+            <label class="ataques" for="hacha">🪓</label>
             <input type="radio" name="ataques" id="hacha"/>
-            <label for="bombaAcme">💣</label>
+            <label class="ataques" for="bombaAcme">💣</label>
             <input type="radio" name="ataques" id="bombaAcme"/>
-            <label for="gancho">🧷</label>
+            <label class="ataques" for="gancho">🧷</label>
             <input type="radio" name="ataques" id="gancho"/>
             <br>
             <br>
-            <button id="botonAtaque">ATACAR</button>
+            <div id="botonAtaque">
+                <button>ATACAR</button>
+            </div>
         </p>
     </section>
 
     <!-- HISTORIAL DE COMBATES -->
     <section id="historial">
-        <div>
-            <h5>El que llegue a cero (0)💛 es eliminado</h5>
-            <p><span id="vidasJugador">3</span>💛<span id="tuJugador"></span><span id="ataqueTuJugador"></span></p>
-            <p><span id="vidasOponente">3</span>💛<span id="tuOponente"></span><span id="ataqueTuOponente"></span></p>
-            <button id="contraAtacar">Contratacar</button>
-        </div>
-        <div>
-            <h4 id="tituloHistorial">Historial de combates:</h4>
-        </div>  
+        <p><span id="tuJugador"></span><span id="ataqueTuJugador"></span> 💛(<span id="vidasJugador">3</span>)</p>
+        <p><span id="tuOponente"></span><span id="ataqueTuOponente"></span> 💛(<span id="vidasOponente">3</span>)</p>
+        <button id="contraAtacar">Contratacar</button>
     </section> 
+
+    <!-- FONDO TOMY & DALY -->
+    <section id="fondoTomyDaly">
+        <img src="/ARCADE/IMG/FondoTomyDaly.jpg" alt="Fondo Tomy Y Daly" />
+    </section>
 </main>
 
 <script src="arcade.js"></script>

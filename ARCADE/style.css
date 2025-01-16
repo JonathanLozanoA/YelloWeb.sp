@@ -4,6 +4,7 @@
     /* PROPIEDAD PARA AJUSTAR EL TAMAÑO (PADDIGN) APLICAR EN TODOS LOS PROYECTOS*/
     box-sizing: border-box;
 }
+
 body {
     display: flexbox;
     justify-content: center;
@@ -78,15 +79,19 @@ main {
     align-items: center;
 }
 
-#inicioJuego {
-    display: flex;
+
+#fondoTomyDaly img {
+    display: inline-block;
+    width: 100%;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
+    /* position: relative; */
 }
 
 h2 {
-    font-size: 44px;
     background-color: #ffd90f;
+    font-size: 44px;
     width: 550px;
     height: 80px;
     border-radius: 20px;
@@ -94,75 +99,100 @@ h2 {
     padding: 10px 4px 24px 20px;
 }
 
-#botonTomy, #botonDaly {
-    padding: 0;
-    height: 282.3px;
+#inicioJuego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+#botonesSeleccionJugador button {
+    height: 152px; 
+}
+
+#botonTomy img, #botonDaly img {
+    width: 150px;
+}
+
+#seleccionAtaque {
+    margin: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: absolute;
 }
 
 h3 {
     font-family: "Coming Soon";
     font-size: 32px;
     padding-bottom: 10px;
-    margin: 0 0 20px 20px;
-    
+    margin: 0 0 20px 20px;    
 }
 
-label {
+.ataques {
     font-size: 40px;
     padding: 0 0 0 16px;
 }
 
-#seleccionAtaque {
+#botonAtaque {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; 
 }
 
-#botonAtaque {
+#botonAtaque button {
+    background-color: #ffd90f;
     margin: 10px;
-    border-radius: 20px;    
+    border-radius: 20px;   
+    border: none; 
     width: 140px;
     height: 40px;
     font-size: 24px;
-    border: none;
-    background-color: #ffd90f;
-    font-weight: bold;
+    font-weight: bold;       
+}
+
+#reiniciar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #botonReiniciar  {
-    border-radius: 20px;    
+    background-color: #ffd90f;
+    border-radius: 20px;  
+    border: none;  
     width: 140px;
     height: 40px;
     font-size: 16px;
-    border: none;
-    background-color: #ffd90f;
     font-weight: bold;
     margin: 24px;
 }
 
 #mensajeFinal {
-    font-size: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 36px;
     margin: 5px;
 }
 
 #contraAtacar {
-    border-radius: 20px;    
+    background-color: #ffd90f;
+    border-radius: 20px; 
+    border: none;   
     width: 140px;
     height: 40px;
     font-size: 20px;
-    border: none;
-    background-color: #ffd90f;
-    font-weight: bold; 
+    font-weight: bold;
     margin: 10px;
 }
 
 #historial {
-    margin: 10px;
+    margin: 100px;
     font-size: 20px;
+    line-height: 36px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    line-height: 0.9;
-    font-size: 30px;
-    line-height: 44px;
+    justify-items: center;
+    position: absolute;
 }
