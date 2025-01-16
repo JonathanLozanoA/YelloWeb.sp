@@ -81,6 +81,7 @@ main {
 
 
 #fondoTomyDaly img {
+    background-image: url('/ARCADE/IMG/FondoTomyDaly2.jpg');
     display: inline-block;
     width: 100%;
     /* display: flex; */
@@ -104,6 +105,12 @@ h2 {
     flex-direction: column;
     align-items: center;
     position: absolute;
+}
+h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
 }
 
 #botonesSeleccionJugador button {
