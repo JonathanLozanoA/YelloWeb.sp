@@ -101,6 +101,7 @@ h2 {
     align-items: center;
     position: absolute;
 }
+
 h4 {
     display: flex;
     flex-direction: column;
@@ -198,4 +199,27 @@ h3 {
     flex-direction: column;
     justify-items: center;
     position: absolute;
+}
+
+
+/* DISEÑO RESPONSIVE: LO QUE ESTÁ ADENTRO SE MODIFICA */
+@media (max-width: 360px) {
+
+    #imgH1 {
+        border-radius: 40px;
+        width: 350px;
+    }
+
+    #historial {
+        font-size: 18px;
+        width: 286px;
+    }
+
+    #mensajeFinal {
+        font-size: 32px;
+    }
+
+    #fondoTomyDaly img {
+        display: none;
+    }
 }
