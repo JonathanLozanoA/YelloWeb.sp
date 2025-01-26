@@ -14,9 +14,9 @@ function iniciarJuego(){
     let ocultarSeccionHistorial = document.querySelector("#historial")
     ocultarSeccionHistorial.style.display = "none"
     //
+
     let tuJugador = document.querySelector("#tuJugador")
     let tuOponente = document.querySelector("#tuOponente")
-    
     let botonTomy = document.querySelector("#botonTomy")
     let botonDaly = document.querySelector("#botonDaly")
     
@@ -47,6 +47,7 @@ function iniciarJuego(){
         let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
         ocultarSeccionSeleccionAtaque.style.display = "block"
         //
+
         tuJugador.innerHTML = "🐭 ¡DALY usó "
         tuOponente.innerHTML = "😼 ¡TOMY usó "
         ataqueConDaly = true
@@ -66,6 +67,7 @@ function ataque() {
     let ocultarSeccionHistorial = document.querySelector("#historial")
     ocultarSeccionHistorial.style.display = "block"
     //
+
     let ataqueTuJugador = document.querySelector("#ataqueTuJugador")
     
     if(cuchillo.checked && (ataqueConTomy == true || ataqueConDaly == true)) {
@@ -212,6 +214,7 @@ function revisarVidas() {
         mensajeFinal("✨🏆¡GANASTE!🏆✨")
         crearBotonReiniciar()
     }
+
     // CONTRA ATAQUE
     let contraAtacar = document.querySelector("#contraAtacar")
     contraAtacar.addEventListener("click", contra)
@@ -231,17 +234,17 @@ function contra() {
         ocultarSeccionHistorial.style.display = "none"
 }
 
-// BOTON REINICIAR JUEGO
+// CREAR BOTON REINICIAR JUEGO
 function crearBotonReiniciar() {
     // OCULTAR SECCION
     let contraAtacar = document.querySelector("#contraAtacar")
     contraAtacar.style.display = "none"
+    //
 
     let reiniciar = document.querySelector("#reiniciar")
     let botonReiniciar = document.createElement("button")
     botonReiniciar.innerHTML = "Reiniciar Juego"
     botonReiniciar.id = "botonReiniciar"
-  
     reiniciar.appendChild(botonReiniciar)
     botonReiniciar.addEventListener("click", reiniciarJuego)
   }
@@ -264,22 +267,6 @@ function mensajeFinal(resultadoFinal) {
     let newParrafo = document.createElement("p")
     newParrafo.innerHTML = resultadoFinal
     mensajeFinal.appendChild(newParrafo)
-
-    // DESACTIVAR BOTON SELECCIONAR Y ATAQUES AL FINALIZAR JUEGO
-    // let desactivarBoton = document.querySelector("#botonAtaque")
-    // desactivarBoton.disabled = true
-    // let rayoLaserInput = document.querySelector("#rayoLaser")
-    // rayoLaserInput.disabled = true
-    // let cuchilloInput = document.querySelector("#cuchillo")
-    // cuchilloInput.disabled = true
-    // let cactusInput = document.querySelector("#cactus")
-    // cactusInput.disabled = true
-    // let bombaAcmeInput = document.querySelector("#bombaAcme")
-    // bombaAcmeInput.disabled = true
-    // let hachaInput = document.querySelector("#hacha")
-    // hachaInput.disabled = true
-    // let ganchoInput = document.querySelector("#gancho")
-    // ganchoInput.disabled = true
 }
 
 // HISTORIAL DE COMBATES

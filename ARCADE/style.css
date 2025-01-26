@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    /* PROPIEDAD PARA AJUSTAR EL TAMAÑO (PADDIGN) APLICAR EN TODOS LOS PROYECTOS*/
+    /* PROPIEDAD PARA AJUSTAR EL (PADDIGN) EN TODO EL PROYECTO*/
     box-sizing: border-box;
 }
 
@@ -207,7 +207,6 @@ h3 {
 
 /* DISEÑO RESPONSIVE: LO QUE ESTÁ ADENTRO SE MODIFICA */
 @media (max-width: 360px) {
-
     #imgH1 {
         border-radius: 40px;
         width: 350px;
