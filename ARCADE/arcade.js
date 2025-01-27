@@ -19,10 +19,10 @@ function iniciarJuego(){
     let tuOponente = document.querySelector("#tuOponente")
     let botonTomy = document.querySelector("#botonTomy")
     let botonDaly = document.querySelector("#botonDaly")
-    
+
     botonTomy.addEventListener("click", seleccionTomy)
     botonDaly.addEventListener("click", seleccionDaly)
-    
+
     function seleccionTomy(){
         // OCULTAR SECCION
         let ocultarSeccionJugador = document.querySelector("#seleccionJugador")
@@ -91,10 +91,12 @@ function ataque() {
     } else {
         alert("Seleccione primero un ataque 🧨")
         ataqueJugador = ""
+        // OCULTAR SECCION
         let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
         ocultarSeccionSeleccionAtaque.style.display = "block"
         let ocultarSeccionHistorial = document.querySelector("#historial")
         ocultarSeccionHistorial.style.display = "none"
+        //
     }
     ataqueTuJugador.innerHTML = ataqueJugador    
 }
@@ -228,10 +230,12 @@ function revisarVidas() {
 
 // CONTRA ATAQUE
 function contra() {
+    // OCULTAR SECCION
     let ocultarSeccionSeleccionAtaque = document.querySelector("#seleccionAtaque")
     ocultarSeccionSeleccionAtaque.style.display = "block"
     let ocultarSeccionHistorial = document.querySelector("#historial")
         ocultarSeccionHistorial.style.display = "none"
+    //
 }
 
 // CREAR BOTON REINICIAR JUEGO
